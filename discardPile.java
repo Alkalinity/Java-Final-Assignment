@@ -1,4 +1,6 @@
-public class discardPile extends cardPile implements hand{
+import java.util.Random;
+
+public class discardPile extends cardPile{
 
    public void addCard(Card c){
       cardPile.add(c);
@@ -10,7 +12,7 @@ public class discardPile extends cardPile implements hand{
       int s = cardPile.size();
       for(int i = 0; i < s; i++){
          Card c = cardPile.remove(0);
-         h.addHand(c);
+         h.addCard(c);
       }
    }
    public void shuffle(){
@@ -18,7 +20,7 @@ public class discardPile extends cardPile implements hand{
       int randNum;
       Card temp;
       Random r = new Random();
-      for (int i = 0; i < ct; i++)
+      for (int i = 0; i < cardPile.size(); i++)
       {
          randNum = r.nextInt(cardPile.size());
          temp = cardPile.get(i);
