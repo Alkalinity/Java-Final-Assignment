@@ -19,6 +19,7 @@ public class Card{
    /* private data for rank and suit of card */
    private int rank;
    private int suit;
+   private String image;
    
    /**
    Constructor for Card that takes the rank and the suit
@@ -26,6 +27,7 @@ public class Card{
    public Card(int rank, int suit){
       this.rank = rank;
       this.suit = suit;
+      image = this.getImage();
    }
    /** Getter for Rank
       @return rank
@@ -93,7 +95,7 @@ public class Card{
    @return string
    */
    public String toString(){
-      return "The card is a " + this.getRankString() + " of " + this.getSuitString() + ".";
+      return this.getRankString() + " of " + this.getSuitString() + ".";
    }
    /**
    equals method checks if two cards are equal to
@@ -130,5 +132,52 @@ public class Card{
          status = false;
       return status;
    }
+   public String getImageRank(){
+      if(rank == 1)
+         return "Ace";
+      else if(rank == 2)
+         return "2";
+      else if (rank == 3)
+         return "3";
+      else if (rank == 4)
+         return "3";
+      else if (rank == 5)
+         return "5";
+      else if (rank == 6)
+         return "6";
+      else if (rank == 7)
+         return "7";
+      else if (rank == 8)
+         return "8";
+      else if (rank == 9)
+         return "9";
+      else if (rank == 10)
+         return "10";
+      else if (rank == 11)
+         return "jack";
+      else if (rank == 12)
+         return "queen";
+      else if (rank == 13)
+         return "king";
+      else
+         return "It broke";
+   }
+   public String getImageSuit(){
+      if(suit == 0)
+         return "s";
+      else if(suit == 1)
+         return "c";
+      else if (suit == 2)
+         return "h";
+      else if (suit == 3)
+         return "d";
+      else
+         return "It broke";
+   }
+   public String getImage(){
+      String image = this.getImageRank() + this.getImageSuit() + ".jpg";
+      return image;
+   }
 }
+
          
