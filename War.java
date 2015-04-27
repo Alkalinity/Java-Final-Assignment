@@ -24,22 +24,26 @@ public class War{
       if(yourCard.greaterThan(computerCard)){
          yourDiscard.addCard(yourCard);
          yourDiscard.addCard(computerCard);
-         this.turnWinner = "player"; 
+         this.turnWinner = "player";
+         this.gameCheck(); 
       }
       else if(yourCard.lessThan(computerCard)){
          computerDiscard.addCard(yourCard);
          computerDiscard.addCard(computerCard);
          this.turnWinner = "computer";
+         this.gameCheck();
       }
       else if(yourCard.equals(computerCard)){
          warTurn();
          if(this.turnWinner == "player"){
             yourDiscard.addCard(yourCard);
             yourDiscard.addCard(computerCard);
+            this.gameCheck();
          }
          else if(this.turnWinner == "computer"){
             computerDiscard.addCard(yourCard);
             computerDiscard.addCard(computerCard);
+            this.gameCheck();
          }   
       }
       
