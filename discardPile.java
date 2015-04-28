@@ -1,11 +1,12 @@
 import java.util.Random;
-
+// extends cardPile
 public class discardPile extends cardPile{
-
+   //Add a card to the pile
    public void addCard(Card c){
       cardPile.add(c);
    }
 
+   //Add the pile to playerhand
    public void toHand(playerHand h){
    
       shuffle();
@@ -15,6 +16,7 @@ public class discardPile extends cardPile{
          h.addCard(c);
       }
    }
+   //Shuffle the discard pile
    public void shuffle(){
       
       int randNum;

@@ -11,6 +11,6 @@ public class DiscardLabel extends JPanel{
    }
    public void changeCard(cardPile p){
       
-      discardLabel.setText("Cards In Discard" + p.cardsRemaining());   
+      discardLabel.setText("Cards In Discard: " + p.cardsRemaining());   
    }
 }

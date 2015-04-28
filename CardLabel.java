@@ -6,11 +6,11 @@ public class CardLabel extends JPanel{
    
    public CardLabel(){
    
-      cardLabel = new JLabel("Card");
+      cardLabel = new JLabel("Cards in Deck: ");
       add(cardLabel);
    }
-   public void changeCard(Card c){
+   public void changeCard(cardPile p){
       
-      cardLabel.setText(c.toString());   
+      cardLabel.setText("Cards In Hand: " + p.cardsRemaining());   
    }
 }
