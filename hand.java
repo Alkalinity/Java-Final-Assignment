@@ -1,5 +1,4 @@
-public interface hand{
+public interface Hand{
+   void addCard(Card c);
 
-   double getRemaining();
-   double remove();
 }

@@ -1,12 +1,15 @@
 import java.util.Random;
 // extends cardPile
-public class discardPile extends cardPile{
+public class discardPile extends cardPile implements Hand{
    //Add a card to the pile
    public void addCard(Card c){
       cardPile.add(c);
    }
 
    //Add the pile to playerhand
+   /**
+   @param playerHand h
+   */
    public void toHand(playerHand h){
    
       shuffle();

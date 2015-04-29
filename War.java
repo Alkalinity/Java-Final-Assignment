@@ -85,27 +85,51 @@ public class War{
       }
    }
    //Getter
+   /**
+   @return cardPile yourDiscard
+   */
    public cardPile getYourDiscard(){
       return this.yourDiscard;
    }
+   /**
+   @return cardPile computerDiscard
+   */
    public cardPile getComputerDiscard(){
       return this.computerDiscard;
    }
+   /**
+   @return cardPile yourHand
+   */
    public cardPile getYourHand(){
       return this.yourHand;
    }
+   /**
+   @return cardPile computerHand
+   */
    public cardPile getComputerHand(){
       return this.computerHand;
    }
+   /**
+   @return Card yourCard
+   */
    public Card getYourCard(){
       return this.yourCard;
    }
+   /**
+   @return Card computerCard
+   */
    public Card getComputerCard(){
       return this.computerCard;
    }
+   /**
+   @return String gameWinner
+   */
    public String getGameWinner(){
       return this.gameWinner;
    }
+   /**
+   @return String turnWinner
+   */
    public String getTurnWinner(){
       return this.turnWinner;
    }
